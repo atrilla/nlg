@@ -1,0 +1,54 @@
+Natural Language Generator (NLG)
+================================
+
+This INSTALL file explains the compilation process that
+has to be carried out in order to obtain a binary
+runnable distribution of the NLG.
+
+The folder where this file is located is referred to as the
+root folder, "nlg", and it should contain the 
+source code files, dependencies, and all the needed resources
+to build the project.
+
+
+Premake4 build script generation tool
+------------------------------------
+Firstly, the premake4 tool has to be available in the execution
+PATH of the working environment. Premake4 may be obtained from:
+
+    http://industriousone.com/premake
+
+
+The Boost Iostreams Library external dependency
+-----------------------------------------------
+The Boost Iostreams Library (libboost_iostreams) has to be available 
+in the system.
+
+
+NLG building
+------------
+Once in the root folder, the premake4 will be in charge
+of the compilation process just by typing:
+
+    premake4 gmake; make
+
+The binaries of the project should be obtained within a few seconds
+in the "bin" folder.
+
+The debug compilation mode is the default. For the release, run:
+
+    premake4 gmake; make config=release
+
+Finally, the documentation of the project may be generated with doxygen,
+which is usually available in the software package repositories of the
+common user-oriented GNU/Linux distributions. Run:
+
+    doxygen doc/nlg.dox.cfg
+
+and the HTML documentation files should be made available in the "doc/html"
+folder.
+
+The project may be cleaned by typing:
+
+    make clean; premake4 clean; rm -rf doc/html/*
+

@@ -1,0 +1,33 @@
+Natural Language Generator (NLG)
+================================
+
+The Natural Language Generator shows how a simple n-gram-based 
+Language Model can be used to learn from textual data and generate 
+language instances.
+
+NLG has been coded in the C/C++ programming language.
+
+----------
+
+This README text file only provides a general description of
+the project.
+
+In order to obtain the project's files organisation please refer
+to the HACKING text file included in this source code distribution of 
+NLG.
+
+The information relating to the different classes that compose
+the NLG is pertinently reported in the documentation.
+Please build the system first as indicated in the INSTALL file 
+and launch a web browser with the "doc/html/index.html" file.
+
+----------
+
+For any comment or suggestion of any kind, you may contact
+Alexandre Trilla
+
+    <alex@atrilla.net>
+
+Wishing that the NLG may be useful to the community,
+receive a most sincere and cordial salutation.
+

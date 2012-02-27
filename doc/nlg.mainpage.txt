@@ -1,0 +1,56 @@
+/**
+ * @mainpage Natural Language Generator (NLG)
+ * 
+ * @par General concept
+ * Natural Language Generator based on n-gram Language Models.
+ * 
+ * The Natural Language Generator shows how a simple 
+ * {@link ngram n-gram}-based Language Model can be used to learn from 
+ * textual data and {@link generator generate} language instances.
+ *
+ * On the basis of having looked at a lot o text, it is possible to know
+ * which words tend to follow other words.
+ * The task of predicting the next word according to a given history can
+ * be stated as attempting to estimate the probability function <i>P</i>:
+ *
+ * @image html eqngram.png "Prediction task as is described in Manning and Schutze (1999)."
+ *
+ * For this task, each textual history cannot possibly be considered
+ * separately. In order to make this problem tractable, histories that are
+ * similar in some way need to be grouped so as to give reasonable
+ * predictions as to which words can be expected to come next. In this
+ * sense, one possible method to group them is by making a Markov
+ * assumption that only the prior local context, i.e., the last few words,
+ * affects the next word. This yields an (n-1)th order Markov model or
+ * an n-gram word model (the last word of the n-gram being given is the
+ * word that is being predicted).
+ *
+ * So, in principle, it would be desirable of an n-gram model to be large in
+ * order to accurately model long sequences. However, there is the problem
+ * that then there are a lot of parameters to estimate (by the order of
+ * the number of words in the vocabulary raised to the power of <i>n</i>)
+ * and the curse of dimensionality arises. While there are a limited
+ * number of frequent events in language, there is a seemingly never
+ * ending tail to the probability distribution of rare events, and
+ * enough data can never be collected to get to the end of the tail (cf.
+ * Zipf's law). For this reason, n-gram systems usually use bigrams or
+ * trigrams (<i>n</i> equal to 2 or 3, respectively, and often make do
+ * with a smaller vocabulary) and they work best when trained on enormous
+ * amounts of data.
+ *
+ * --<br>
+ * [Manning and Schutze, 1999] Manning, C. D. and Schutze, H.,
+ * "Foundations of Statistical Natural Language Processing", Cambridge, 
+ * MA, USA: The MIT Press, 1999.
+ * 
+ * @par Usage details
+ * In order to use the NLG, two parameters need to be passed:
+ *     - -n ORDER: the order of the language model.
+ *     - -t FILE: the training file.
+ * 
+ * Then, the NLG learns from the text of the training file and yields one
+ * output at a time.
+ * 
+ * @author Alexandre Trilla (atrilla)
+ * @version 0.0.1
+ */ 

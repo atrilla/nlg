@@ -1,0 +1,63 @@
+Natural Language Generator (NLG)
+================================
+
+The organisation of this source code distribution of the NLG is as follows:
+
++ nlg/
+    + bin/
+    + COPYING
+    + CREDITS
+    + doc/
+    + HACKING
+    + include/
+    + INSTALL
+    + premake4.lua
+    + README
+    + src/
+
+
+The elements listed above are described in the following lines.
+
+>> nlg/
+This is the root directory of the project. As it can be seen in the
+tree, all the rest of the elements are descendants of this parent
+folder. All elements should be referenced with respect to this folder.
+
+>> bin/
+This folder contains the generated binaries, both debug and release 
+compilation modes.
+
+>> COPYING
+This file contains a description of the rights granted with this source
+code distribution.
+
+>> CREDITS
+This text file contains a reference to all the projects
+that are used.
+
+>> doc/
+This folder contains the documentation.
+
+>> HACKING
+This is the text file that the reader is reading at this moment.
+It describes every element contained in the project root folder.
+
+>> include/
+This folder contains the headers.
+
+>> INSTALL
+This text file describes the compilation process.
+
+>> premake4.lua
+This is the file used by the premake4 build script generation tool to
+compile the project.
+
+>> README
+This text file gives a general description of the project.
+
+>> src/
+This folder keeps the source code files.
+In this folder there should be encountered all the needed information
+to run the project successfully or contribute to the project's
+development and continuity.
+
